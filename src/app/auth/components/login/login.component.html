@@ -1,0 +1,60 @@
+<app-auth-layout>
+  <mat-card class="card animate__animated animate__bounceInLeft">
+    <mat-card-content class="card__content">
+      <form [formGroup]="form" class="card__form">
+        <mat-form-field
+          appearance="fill"
+          class="card__control"
+        >
+          <mat-label>{{ 'AUTH.LABEL.ENTER_EMAIL' | translate }}</mat-label>
+          <input
+            matInput
+            placeholder="pat@example.com"
+            formControlName="email"
+            required
+            class="card__input"
+          >
+          <mat-error *ngIf="email?.invalid && email?.touched">
+            <p *ngIf="email?.errors?.['required']">{{ 'AUTH.ERROR.EMAIL_IS_REQUIRED' | translate }}</p>
+            <p *ngIf="email?.errors?.['email']">{{ 'AUTH.ERROR.EMAIL_IS_INVALID' | translate }}</p>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field
+          appearance="fill"
+          class="card__control"
+        >
+          <mat-label>{{ 'AUTH.LABEL.ENTER_PASSWORD' | translate }}</mat-label>
+          <input
+            matInput
+            placeholder="*******"
+            formControlName="password"
+            required
+            type="password"
+            class="card__input"
+          >
+          <mat-error *ngIf="password?.invalid && password?.touched">
+            <p *ngIf="password?.errors?.['required']">{{ 'AUTH.ERROR.PASSWORD_IS_REQUIRED' | translate }}</p>
+            <p *ngIf="password?.errors?.['minlength']">{{ 'AUTH.ERROR.PASSWORD_IS_TOO_SHORT' | translate }}</p>
+          </mat-error>
+        </mat-form-field>
+      </form>
+      <mat-error class="card__error" *ngIf="error && !form.dirty">{{ error }}</mat-error>
+    </mat-card-content>
+    <mat-card-actions class="card__actions">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="loading || form.invalid"
+        (click)="onSubmit()"
+      >
+        {{ 'AUTH.BUTTON.LOGIN' | translate }}
+      </button>
+      <div class="link link--mt" (click)="toPasswordRecovery()">{{ 'AUTH.LINK.FORGOT_PASSWORD' | translate }}</div>
+    </mat-card-actions>
+    <mat-card-footer class="card__footer">
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</app-auth-layout>

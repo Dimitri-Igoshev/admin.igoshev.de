@@ -1,8 +1,23 @@
 {
   "AUTH": {
     "TITLE": {
-      "SIGN_UP": "Регистрация",
-      "SIGN_IN": "Войти"
+      "LOGIN": "Вход"
+    },
+    "LABEL": {
+      "ENTER_EMAIL": "Введите свой email",
+      "ENTER_PASSWORD": "Введите свой пароль"
+    },
+    "ERROR": {
+      "EMAIL_IS_REQUIRED": "Email не указан",
+      "EMAIL_IS_INVALID": "Email невалидный",
+      "PASSWORD_IS_REQUIRED": "Пароль не указан",
+      "PASSWORD_IS_TOO_SHORT": "Пароль слишком короткий"
+    },
+    "LINK": {
+      "FORGOT_PASSWORD": "Забыли пароль?"
+    },
+    "BUTTON":{
+      "LOGIN": "Войти"
     }
   }
 }

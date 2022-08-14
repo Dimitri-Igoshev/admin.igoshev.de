@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~animate.css/animate.min.css";
+
+* {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }
+
+.link {
+  cursor: pointer;
+  font-style: italic;
+  color: #666;
+  display: flex;
+  align-items: center;
+
+  &--mt {
+    margin-top: .5rem;
+  }
+
+  &--ml {
+    margin-left: .5rem;
+  }
+
+  &:hover {
+    //color: #ffd740;
+    color: #673ab7;
+  }
+}

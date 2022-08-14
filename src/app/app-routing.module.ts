@@ -1,22 +1,16 @@
 import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
-import { AuthLayoutComponent } from './common/layouts/auth-layout/auth-layout.component'
-import { SignInComponent } from './auth/components/sign-in/sign-in.component'
-import { SignUpComponent } from './auth/components/sign-up/sign-up.component'
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router'
+import { AuthGuard } from './common/guards/auth.guard'
 
 const routes: Routes = [
-  {
-    path: '', component: AuthLayoutComponent, children: [
-      { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
-      { path: 'sign-in', component: SignInComponent },
-      { path: 'sign-up', component: SignUpComponent },
-    ]
-  }
+  { path: '', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthGuard] },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: '**', redirectTo: '' }
 ]
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
   exports: [RouterModule]
 })

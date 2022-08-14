@@ -1,0 +1,16 @@
+{
+  "AUTH": {
+    "TITLE": {
+      "LOGIN": "Login"
+    },
+    "ERROR": {
+      "EMAIL_IS_REQUIRED": "Email is required",
+      "EMAIL_IS_INVALID": "Email is invalid",
+      "PASSWORD_IS_REQUIRED": "Password is required",
+      "PASSWORD_IS_TOO_SHORT": "Password is too short, min length 6 characters"
+    },
+    "BUTTON":{
+      "LOGIN": "Login"
+    }
+  }
+}

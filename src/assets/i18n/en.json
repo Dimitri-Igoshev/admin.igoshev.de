@@ -1,8 +1,23 @@
 {
   "AUTH": {
     "TITLE": {
-      "SIGN_UP": "Sign Up",
-      "SIGN_IN": "Sign In"
+      "LOGIN": "Login"
+    },
+    "LABEL": {
+      "ENTER_EMAIL": "Enter your email",
+      "ENTER_PASSWORD": "Enter your password"
+    },
+    "ERROR": {
+      "EMAIL_IS_REQUIRED": "Email is required",
+      "EMAIL_IS_INVALID": "Email is invalid",
+      "PASSWORD_IS_REQUIRED": "Password is required",
+      "PASSWORD_IS_TOO_SHORT": "Password is too short, min length 6 characters"
+    },
+    "LINK": {
+      "FORGOT_PASSWORD": "Forgot your password?"
+    },
+    "BUTTON":{
+      "LOGIN": "Login"
     }
   }
 }

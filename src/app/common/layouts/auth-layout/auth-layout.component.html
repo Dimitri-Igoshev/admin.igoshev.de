@@ -1,3 +1,11 @@
-<div class='display'>
-  <router-outlet></router-outlet>
+<div class="display">
+  <div class="logo animate__animated animate__bounceInRight">Admin PRO</div>
+  <ng-content></ng-content>
+  <div class="languages animate__animated animate__bounceInRight">
+    <mat-icon aria-hidden="false" aria-label="Language" fontIcon="translate" class="languages__icon "></mat-icon>
+    <div class="link link--ml" (click)="changeLanguage('en')">en</div>
+    <div class="link link--ml" (click)="changeLanguage('de')">de</div>
+      <div class="link link--ml" (click)="changeLanguage('ru')">ru</div>
+  </div>
+  <div class="footer languages animate__animated animate__fadeIn">{{ copyright }}</div>
 </div>
