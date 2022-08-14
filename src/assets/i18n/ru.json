@@ -4,8 +4,8 @@
       "LOGIN": "Вход"
     },
     "LABEL": {
-      "ENTER_EMAIL": "Введите свой email",
-      "ENTER_PASSWORD": "Введите свой пароль"
+      "ENTER_EMAIL": "Введите email",
+      "ENTER_PASSWORD": "Введите пароль"
     },
     "ERROR": {
       "EMAIL_IS_REQUIRED": "Email не указан",
